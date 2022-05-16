@@ -1,0 +1,13 @@
+.box{
+    padding: 30px;
+}
+
+.button{
+    border-radius: 50%;
+    color: #FFF;
+    background: #003087;
+    width: 40px !important;
+    height: 40px !important;
+    margin-right: 10px;
+}
+

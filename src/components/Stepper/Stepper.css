@@ -1,0 +1,15 @@
+.Stepper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.text{
+    width: 400px;
+    margin: 50px !important;
+
+}
+.Button{
+    display: flex;
+    justify-content:space-around;
+    margin: 10px;
+}
