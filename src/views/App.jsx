@@ -3,12 +3,15 @@ import "./App.css";
 
 import Menu from "../components/layout/Menu";
 import Content from "../components/layout/Content";
+import { FormsProvider } from "../provider/Forms";
 const App = (props) => {
   return (
     <>
       <div className="App">
-        <Menu />
-        <Content />
+        <FormsProvider>
+          <Menu />
+          <Content />
+        </FormsProvider>
       </div>
     </>
   );
