@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { CrudContext } from '../../../provider/CrudFmea'
+
 
 const Capa = () => {
+    const Crud = useContext(CrudContext)
+    console.log(Crud.infoFmea)
     return (
         <div>
-            <table class="table table-striped">
+            <table className="table table-striped">
                 <thead>
                     <tr>
                         <th scope="col">Nome do FMEA</th>
@@ -15,15 +19,20 @@ const Capa = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td scope="row">Aplicação de  Primero</td>
-                        <td>Carroceria</td>
-                        <td>Pintura</td>
-                        <td>Pintura</td>
-                        <td>Artur</td>
-                        <td><a href='/revisao'>Visualizar</a>/<a href='#'>editar</a>                         
-                        </td>
-                    </tr>
+                        {Crud.infoFmea.map((resp, index) => {
+                            return(
+                                <tr key={index}>
+                                <td scope="row">{resp.nome}</td>
+                                <td>{resp.peca}</td>
+                                <td>{resp.programa}</td>
+                                <td>{resp.setor}</td>
+                                <td>{resp.responsavel}</td>
+                                <td><a href='/revisao'>Visualizar</a>/<a href='#'>editar</a>                         
+                                </td>
+                            </tr>
+                            )
+                        })}
+                   
 
                 </tbody>
             </table>

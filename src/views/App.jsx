@@ -12,14 +12,14 @@ const App = (props) => {
     <>
       <div className="App">
         <FormsProvider>
-          <CrudProvider>
-            <BrowserRouter>
-                <Menu />
-                <Content />
+          <BrowserRouter>
+            <CrudProvider>
+              <Menu />
+              <Content />
 
-            </BrowserRouter>
+            </CrudProvider>
+          </BrowserRouter>
 
-          </CrudProvider>
         </FormsProvider>
       </div>
     </>
