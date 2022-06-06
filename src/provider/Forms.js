@@ -1,8 +1,12 @@
-import React, { useState} from "react";
+import React, { useEffect, useState} from "react";
+import axios from 'axios';
 
 export const FormsContext = React.createContext();
 
 export const FormsProvider = (props) => {
+
+  const URL = 'http://localhost:3000/fmea'
+  const [apiRows, setApiRows] = useState([])
   const [rows, setRows] = useState([
     createData(
       "Montar vedação de teto solar - Temperatura  (> 18°C)",
@@ -34,6 +38,14 @@ export const FormsProvider = (props) => {
     }
     setRows([...rows, add]);
   }
+
+  useEffect(() =>{
+    axios.get(URL)
+    .then(res => {
+      setApiRows(res.data)
+    })
+    console.log(rows)
+  }, [rows])
 
   return (
       <FormsContext.Provider value={{rows, AdicionarArray}}>

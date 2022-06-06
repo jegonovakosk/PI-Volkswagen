@@ -4,6 +4,7 @@ import Image from "../../img/logovks.jpg";
 
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import HistoryIcon from '@mui/icons-material/History';
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   return (
@@ -12,20 +13,20 @@ const Menu = () => {
         <img src={Image} alt="" width="250px" />
         <ul>
           <li>
-            <a href="/">
+            <Link to="/">
               <div className="icon">
                 <DashboardIcon />
                 <div className="name">FMEA</div>
               </div>
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about">
+            <Link to="/about">
               <div className="icon">
                 <HistoryIcon />
                 <div className="name">Historico</div>
               </div>
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

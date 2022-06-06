@@ -1,23 +1,24 @@
 import React from "react";
 import "./estilo.css";
 
+import {Link} from 'react-router-dom'
+
 //import Stepper from "../../components/Stepper/Stepper";
-import Table from "../../components/table/Table";
-import Transititions from "../../components/transitions/Transititions";
+
+import Capa from "./Capa/Capa";
 
 const Home = () => {
   return (
     <div className="container">
       <div className="title">
-        <h1>Cadastro FMEA</h1>
+        <h1>Capa</h1>
       </div>
-      <div className="Home">
-        {/* <Stepper /> */}
-        <Transititions/>
-      </div>
-      <div className="table">
-        <Table />
-      </div>
+      <button>
+        <Link to="/crudcapa">
+          Criar Fmea
+        </Link>
+      </button>
+      <Capa />
     </div>
   );
 };

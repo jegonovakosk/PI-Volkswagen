@@ -1,0 +1,8 @@
+.tela{
+    height: 100vh;
+}
+
+.title{
+    border-bottom: 1px solid rgb(116, 114, 114);
+    margin-bottom: 50px;
+}
